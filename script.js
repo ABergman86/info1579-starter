@@ -1,10 +1,10 @@
 //TODO: Include your multi-line comment header
 /*
-    Name: 
-    Date: 
-    Assignment: 
-    Quarter: 
-    Instructor: 
+    Name: Amanda Bergman
+    Date: Sept. 14, 2026
+    Assignment: Module 1 Applied Prog. Assign 
+    Quarter: Fall 2026
+    Instructor: Tania Kuisma
 */
 
 // TODO: Import "use strict" directive
