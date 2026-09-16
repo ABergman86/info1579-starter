@@ -49,14 +49,14 @@ let percentRemaining = 100 - percentComplete;
 
 // TODO: Display your results. Use the correct variables and avoid hard-coding the data below.
 // TODO: Adjust all decimals to two places.
-display("Welcome Message", welcomeMessage);
+display ("Welcome Message", welcomeMessage);
 display("My Name", myName);
 display("Enrolled", isEnrolled);
 display("Total Modules", totalModules);
 display("Daily Study Hours (7 days)", dailyStudyHours.toFixed(2));
 display("Daily Study Minutes (7 days)", dailyStudyMinutes.toFixed(2));
 display("Daily Study Hours (with rest day)", adjustedDailyHours.toFixed(2));
-display("Daily Study Minutes (with rest day)", adjustedDailyMinutes.toFixed(2)));
+display("Daily Study Minutes (with rest day)", adjustedDailyMinutes.toFixed(2));
 
 // TODO: Display your results with a % sign
 display("Percent Complete", `${percentComplete.toFixed(2)}%`);
