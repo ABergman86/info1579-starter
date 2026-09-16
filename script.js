@@ -23,6 +23,7 @@ let totalModules = 10;
 let isEnrolled = true;
 
 // TODO: Use a template literal to output a welcome message. Use at least one ${}.
+console.log(`Welcome, to ${myName}'s Webpage!`);
 
 // TODO: Calculate the total study hours for the course. There are 10 modules. Each module takes roughly 6 hours.
 // Formula: totalStudyHours = totalModules * hoursPerWeek
