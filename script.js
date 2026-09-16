@@ -18,9 +18,9 @@ const display = (label, value) =>
 // ADD YOUR CODE BELOW
 
 // TODO: Create variables for your name (string), total number of modules for our class (number), and if you're enrolled (boolean)
-name;
-totalModules;
-isEnrolled;
+const myName = "Amanda Bergman";
+let totalModules = 10;
+let isEnrolled = true;
 
 // TODO: Use a template literal to output a welcome message. Use at least one ${}.
 
