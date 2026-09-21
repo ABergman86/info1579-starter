@@ -28,15 +28,16 @@ const welcomeMessage = `Welcome, to ${myName}'s Webpage!`;
 
 // TODO: Calculate the total study hours for the course. There are 10 modules. Each module takes roughly 6 hours.
 // Formula: totalStudyHours = totalModules * hoursPerWeek
-let totalStudyHours = totalModules * 6;
+const hoursPerWeek = 6;
+const totalStudyHours = totalModules * hoursPerWeek;
 
 // TODO: Calculate the number of study hours each day. Convert the output to minutes (this formula is not provided).
 // Formula: dailyStudyHours = hoursPerWeek / 7
-let dailyStudyHours = totalStudyHours / 7;
-let dailyStudyMinutes = dailyStudyHours * 60;
+const dailyStudyHours = hoursPerWeek / 7;
+const dailyStudyMinutes = dailyStudyHours * 60;
 
 // TODO: Give yourself a rest day and exclude one day out of your week. Calculate the new number of hours and set it to adjustedDailyHours. Convert the output to minutes (this formula is not provided).
-let adjustedDailyHours = (totalStudyHours - dailyStudyHours) / 6;
+let adjustedDailyHours = hoursPerWeek / 6;
 let adjustedDailyMinutes = adjustedDailyHours * 60;
 
 // TODO: Calculate the course percent complete and the course percent remaining. Imagine you've completed 2 modules (Start Here and Module 1).
