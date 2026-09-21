@@ -52,9 +52,25 @@ let adjustedDailyMinutes = adjustedDailyHours * 60;
 
 let modulesCompleted = parseInt(prompt('Enter the number of modules you have completed (0-10):'));
 let percentComplete = (modulesCompleted / totalModules) * 100;
+
 let modulesRemaining = totalModules - modulesCompleted;
 let percentRemaining = (modulesRemaining / totalModules) * 100;
 
+if(percentRemaining === 0) {
+  console.log('Current Progress:Finished');
+}
+else if(percentRemaining >= 1 && percentRemaining < 25) {
+  console.log('Current Progress: Almost Finished');
+}
+else if(percentRemaining >= 25 && percentRemaining < 75) {
+  console.log('Current Progress: Making Progress');
+}
+else if(percentRemaining >= 75 && percentRemaining <= 100) {
+  console.log('Just Getting Started');
+}
+else {
+  console.log('Invalid Entry.');
+}
 // DISPLAY RESULTS
 
 // TODO: Display your results. Use the correct variables and avoid hard-coding the data below.
