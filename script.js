@@ -52,6 +52,26 @@ let adjustedDailyMinutes = adjustedDailyHours * 60;
 
 let modulesCompleted = parseInt(prompt('Enter the number of modules you have completed (0-10):'));
 let percentComplete = (modulesCompleted / totalModules) * 100;
+let courseGrade;
+
+if(percentComplete <0 || percentComplete > 100 || typeof percentComplete !== 'number') {
+  courseGrade = 'Invalid Entry.';
+}
+else if(percentComplete >= 90) {
+  courseGrade = 'A';
+}
+else if(percentComplete >= 80) {
+  courseGrade = 'B';
+}
+else if(percentComplete >= 70) {
+  courseGrade = 'C';
+}
+else if(percentComplete >= 60) {
+  courseGrade = 'D';
+}
+else {
+  courseGrade = 'F';
+} 
 
 let modulesRemaining = totalModules - modulesCompleted;
 let percentRemaining = (modulesRemaining / totalModules) * 100;
