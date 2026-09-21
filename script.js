@@ -46,7 +46,8 @@ let adjustedDailyMinutes = adjustedDailyHours * 60;
 // Formula: percent = (part / whole) * 100
 let modulesCompleted = parseInt(prompt('Enter the number of modules you have completed (0-10):'));
 let percentComplete = (modulesCompleted / totalModules) * 100;
-let percentRemaining = 100 - percentComplete;
+let modulesRemaining = totalModules - modulesCompleted;
+let percentRemaining = (modulesRemaining / totalModules) * 100;
 
 // DISPLAY RESULTS
 
