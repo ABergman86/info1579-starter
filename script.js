@@ -104,6 +104,12 @@ display("Daily Study Minutes (7 days)", dailyStudyMinutes.toFixed(2));
 display("Daily Study Hours (with rest day)", adjustedDailyHours.toFixed(2));
 display("Daily Study Minutes (with rest day)", adjustedDailyMinutes.toFixed(2));
 display("Course Progress", `${percentRemaining.toFixed(2)}%`);
+
+if (courseGrade === 'Invalid Entry.') {
+  display("Course Grade", courseGrade);
+} else {
+  display("Course Grade", `${courseGrade}`);
+}
 // TODO: Display your results with a % sign
 display("Percent Complete", `${percentComplete.toFixed(2)}%`);
 display("Percent Remaining", `${percentRemaining.toFixed(2)}%`);
