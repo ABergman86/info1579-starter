@@ -83,7 +83,7 @@ display("Daily Study Hours (7 days)", dailyStudyHours.toFixed(2));
 display("Daily Study Minutes (7 days)", dailyStudyMinutes.toFixed(2));
 display("Daily Study Hours (with rest day)", adjustedDailyHours.toFixed(2));
 display("Daily Study Minutes (with rest day)", adjustedDailyMinutes.toFixed(2));
-
+display("Course Progress", `${percentRemaining.toFixed(2)}%`);
 // TODO: Display your results with a % sign
 display("Percent Complete", `${percentComplete.toFixed(2)}%`);
 display("Percent Remaining", `${percentRemaining.toFixed(2)}%`);
