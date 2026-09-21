@@ -44,7 +44,7 @@ let adjustedDailyMinutes = adjustedDailyHours * 60;
 
 // TODO: Calculate the course percent complete and the course percent remaining. Imagine you've completed 2 modules (Start Here and Module 1).
 // Formula: percent = (part / whole) * 100
-let modulesCompleted = 2;
+let modulesCompleted = parseInt(prompt('Enter the number of modules you have completed (0-10):'));
 let percentComplete = (modulesCompleted / totalModules) * 100;
 let percentRemaining = 100 - percentComplete;
 
