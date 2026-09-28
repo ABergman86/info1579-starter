@@ -23,9 +23,9 @@ const courseModules = ['Module 1', 'Module 2', 'Module 3', 'Module 4', 'Module 5
 const completedModules = ['Module 1', 'Module 2'];
   completedModules.push('Module 3');
 
-const calculatePercentComplete = (completed, total) => {
+function calculatePercentComplete(completed, total) {
   return (completed / total) * 100;
-};
+}
 const myName = "Amanda Bergman";
 let totalModules = 10;
 let isEnrolled = true;
