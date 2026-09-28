@@ -55,7 +55,9 @@ let adjustedDailyMinutes = adjustedDailyHours * 60;
 // TODO: Calculate the course percent complete and the course percent remaining. Imagine you've completed 2 modules (Start Here and Module 1).
 // Formula: percent = (part / whole) * 100
 
-let percentComplete = calculatePercentComplete(modulesCompleted.length, totalModules.length);
+let percentComplete = function calculatePercentComplete(modulesCompleted, totalModules) {
+  return (modulesCompleted / totalModules) * 100;
+};
 let courseGrade;
 
 if(percentComplete <0 || percentComplete > 100 || typeof percentComplete !== 'number') {
