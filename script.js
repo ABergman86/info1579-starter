@@ -7,7 +7,7 @@
     Instructor: Tania Kuisma
 */
 
-// TODO: Import "use strict" directive
+// TODO: Import "use strict" directive//
 "use strict";
 
 // DO NOT MODIFY
@@ -21,11 +21,11 @@ const display = (label, value) =>
 
 const courseModules = ['Module 1', 'Module 2', 'Module 3', 'Module 4', 'Module 5', 'Module 6', 'Module 7', 'Module 8', 'Module 9', 'Module 10'];
 const completedModules = ['Module 1', 'Module 2'];
-  completedModules.push('Module 3');
+ // completedModules.push('Module 3');
 
-function calculatePercentComplete(completed, total) {
-  return (completed / total) * 100;
-}
+ //function calculatePercentComplete(completed, total) {
+  //return (completed / total) * 100;
+//}
 const myName = "Amanda Bergman";
 let totalModules = 10;
 let isEnrolled = true;
@@ -55,10 +55,10 @@ let adjustedDailyMinutes = adjustedDailyHours * 60;
 // TODO: Calculate the course percent complete and the course percent remaining. Imagine you've completed 2 modules (Start Here and Module 1).
 // Formula: percent = (part / whole) * 100
 
-let percentComplete = function calculatePercentComplete(modulesCompleted, totalModules) {
-  return (modulesCompleted / totalModules) * 100;
-};
+let modulesCompleted = parseInt(prompt('Enter the number of modules completed:'));
+let percentComplete = (modulesCompleted / totalModules) * 100;
 let courseGrade;
+
 
 if(percentComplete <0 || percentComplete > 100 || typeof percentComplete !== 'number') {
   courseGrade = 'Invalid Entry.';
