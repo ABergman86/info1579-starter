@@ -21,7 +21,7 @@ const display = (label, value) =>
 
 const courseModules = ['Module 1', 'Module 2', 'Module 3', 'Module 4', 'Module 5', 'Module 6', 'Module 7', 'Module 8', 'Module 9', 'Module 10'];
 const completedModules = ['Module 1', 'Module 2'];
- // completedModules.push('Module 3');
+  completedModules.push('Module 3');
 
  //function calculatePercentComplete(completed, total) {
   //return (completed / total) * 100;
@@ -60,7 +60,7 @@ let percentComplete = (modulesCompleted / totalModules) * 100;
 let courseGrade;
 
 
-if(percentComplete <0 || percentComplete > 100 || typeof percentComplete !== 'number') {
+if(percentComplete < 0 || percentComplete > 100 || typeof percentComplete !== 'number') {
   courseGrade = 'Invalid Entry.';
 }
 else if(percentComplete >= 90) {
@@ -82,7 +82,7 @@ else {
 let modulesRemaining = totalModules - modulesCompleted;
 let percentRemaining = (modulesRemaining / totalModules) * 100;
 
-if(percentRemaining === 0) {
+if(percentComplete === 100) {
   console.log('Current Progress:Finished');
 }
 else if(percentRemaining >= 1 && percentRemaining < 25) {
@@ -91,7 +91,7 @@ else if(percentRemaining >= 1 && percentRemaining < 25) {
 else if(percentRemaining >= 25 && percentRemaining < 75) {
   console.log('Current Progress: Making Progress');
 }
-else if(percentRemaining >= 75 && percentRemaining <= 100) {
+else if(percentRemaining >= 75 && percentRemaining < 100) {
   console.log('Just Getting Started');
 }
 else {
