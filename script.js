@@ -34,7 +34,10 @@ const displayModules = (modules) => {
     display(`Module ${i + 1}`, modules[i]);
 }
 };
-displayModules(courseModules);
+const displayCourseModules = () => {
+  displayModules(courseModules);
+};
+displayCourseModules();
  
 const myName = "Amanda Bergman";
 let totalModules = 10;
