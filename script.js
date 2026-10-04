@@ -170,6 +170,8 @@ display("Daily Study Minutes (7 days)", dailyStudyMinutes.toFixed(2));
 display("Daily Study Hours (with rest day)", adjustedDailyHours.toFixed(2));
 display("Daily Study Minutes (with rest day)", adjustedDailyMinutes.toFixed(2));
 display("Course Progress", `${percentComplete.toFixed(2)}%`);
+display("Completed Modules", completedModulesList);
+display("Course Modules", courseModulesList); 
 
 if (courseGrade === 'Invalid Entry.') {
   display("Course Grade", "Invalid Entry.");
