@@ -65,47 +65,42 @@ let adjustedDailyMinutes = adjustedDailyHours * 60;
 // TODO: Calculate the course percent complete and the course percent remaining. Imagine you've completed 2 modules (Start Here and Module 1).
 // Formula: percent = (part / whole) * 100
 
- //let modulesCompleted = parseInt(prompt('Enter the number of modules completed:'));
-
+const modulesCompleted = completedModules.length;
 let courseGrade;
 
+const getCourseProgress = function (percentRemaining) {
+  if (percentRemaining >= 1 && percentRemaining < 25) {
+    return "Almost Finished";
+  } else if (percentRemaining >= 25 && percentRemaining < 75) {
+    return "Making Progress";
+  } else if (percentRemaining >= 75 && percentRemaining < 100) {
+    return "Just Getting Started";
+  } else {
+    return "Invalid Entry.";
+  }
+};
 
-if(percentComplete < 0 || percentComplete > 100 || typeof percentComplete !== 'number') {
-  courseGrade = 'Invalid Entry.';
+if (percentComplete < 0 || percentComplete > 100 || typeof percentComplete !== "number") {
+  courseGrade = "Invalid Entry.";
+} else if (percentComplete >= 90) {
+  courseGrade = "A";
+} else if (percentComplete >= 80) {
+  courseGrade = "B";
+} else if (percentComplete >= 70) {
+  courseGrade = "C";
+} else if (percentComplete >= 60) {
+  courseGrade = "D";
+} else {
+  courseGrade = "F";
 }
-else if(percentComplete >= 90) {
-  courseGrade = 'A';
-}
-else if(percentComplete >= 80) {
-  courseGrade = 'B';
-}
-else if(percentComplete >= 70) {
-  courseGrade = 'C';
-}
-else if(percentComplete >= 60) {
-  courseGrade = 'D';
-}
-else {
-  courseGrade = 'F';
-} 
 
 let modulesRemaining = totalModules - modulesCompleted;
 let percentRemaining = (modulesRemaining / totalModules) * 100;
 
-if(percentComplete === 100) {
-  console.log('Current Progress:Finished');
-}
-else if(percentRemaining >= 1 && percentRemaining < 25) {
-  console.log('Current Progress: Almost Finished');
-}
-else if(percentRemaining >= 25 && percentRemaining < 75) {
-  console.log('Current Progress: Making Progress');
-}
-else if(percentRemaining >= 75 && percentRemaining < 100) {
-  console.log('Just Getting Started');
-}
-else {
-  console.log('Invalid Entry.');
+if (percentComplete === 100) {
+  console.log("Current Progress: Finished");
+} else {
+  console.log(`Current Progress: ${getCourseProgress(percentRemaining)}`);
 }
 
 let courseCompletion = false;
@@ -113,41 +108,40 @@ let studyPlan;
 let studyDay;
 
 if (courseCompletion === true) {
-  studyDay = 'Complete';
-}
-else {
-  studyDay = prompt('Enter the day of the week you plan to study (e.g., Monday, Tuesday, etc.):');
+  studyDay = "Complete";
+} else {
+  studyDay = prompt("Enter the day of the week you plan to study (e.g., Monday, Tuesday, etc.):");
 }
 
 switch (studyDay) {
-  case 'Monday':
-    studyPlan = 'Study for 51.43 minutes today.';
+  case "Monday":
+    studyPlan = "Study for 51.43 minutes today.";
     break;
-    case 'Tuesday':
-      studyPlan = 'Rest day! No studying required.';
-      break;
-    case 'Wednesday':
-        studyPlan ='Lab day! Study for 90 minutes today.';
-        break;
-    case 'Thursday':
-          studyPlan ='Applied programming activity day. Study for 120 minutes today.';
-          break;
-    case 'Friday':
-            studyPlan ='Open day! Review weak topics or take a break.';
-            break;
-    case 'Saturday':
-              studyPlan ='Weekend study day. Review weekly material for 60 minutes today.';
-              break;
-    case 'Sunday':
-        studyPlan ='Prep day. Organize notes for next week.';
-        break;
-    case 'Complete':
-      studyPlan ='Course Completed';
-      break;
-    default:
-      studyPlan ='Invalid day entered. Please check your spelling.';
-      break;
-    }
+  case "Tuesday":
+    studyPlan = "Rest day! No studying required.";
+    break;
+  case "Wednesday":
+    studyPlan = "Lab day! Study for 90 minutes today.";
+    break;
+  case "Thursday":
+    studyPlan = "Applied programming activity day. Study for 120 minutes today.";
+    break;
+  case "Friday":
+    studyPlan = "Open day! Review weak topics or take a break.";
+    break;
+  case "Saturday":
+    studyPlan = "Weekend study day. Review weekly material for 60 minutes today.";
+    break;
+  case "Sunday":
+    studyPlan = "Prep day. Organize notes for next week.";
+    break;
+  case "Complete":
+    studyPlan = "Course Completed";
+    break;
+  default:
+    studyPlan = "Invalid day entered. Please check your spelling.";
+    break;
+}
 
 // DISPLAY RESULTS
 
