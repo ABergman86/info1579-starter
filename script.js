@@ -29,6 +29,12 @@ function calculatePercentComplete(completed, total) {
 const percentComplete = calculatePercentComplete(completedModules.length, courseModules.length);
 console.log(`Course Progress: ${percentComplete}%`);
 
+const displayModules = (modules) => {
+  for(let i = 0; i < modules.length; i++) {
+    display(`Module ${i + 1}`, modules[i]);
+}
+};
+displayModules(courseModules);
  
 const myName = "Amanda Bergman";
 let totalModules = 10;
