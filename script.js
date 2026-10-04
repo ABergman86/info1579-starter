@@ -94,6 +94,8 @@ if (percentComplete < 0 || percentComplete > 100 || typeof percentComplete !== "
   return courseGrade = "F";
 };
 
+const courseGrade = getCourseGrade(percentComplete);
+
 let modulesRemaining = totalModules - modulesCompleted;
 let percentRemaining = (modulesRemaining / totalModules) * 100;
 
