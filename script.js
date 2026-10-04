@@ -45,8 +45,8 @@ const welcomeMessage = `Welcome, to ${myName}'s Webpage!`;
 const hoursPerWeek = 6;
 const totalStudyHours = totalModules * hoursPerWeek;
 
-function calculateStudyHours(modules, hoursPerModule = 6) {
-  return modules * hoursPerModule;
+function calculateStudyHours(totalModules, hoursPerModule = 6) {
+  return totalModules * hoursPerModule;
 }
 const totalStudyHoursCalculated = calculateStudyHours(courseModules.length);
 console.log(`Total Study Hours (Calculated): ${totalStudyHoursCalculated}`);
@@ -83,16 +83,16 @@ const getCourseProgress = function (percentRemaining) {
 if (percentComplete < 0 || percentComplete > 100 || typeof percentComplete !== "number") {
   courseGrade = "Invalid Entry.";
 } else if (percentComplete >= 90) {
-  courseGrade = "A";
+  return courseGrade = "A";
 } else if (percentComplete >= 80) {
-  courseGrade = "B";
+  return courseGrade = "B";
 } else if (percentComplete >= 70) {
-  courseGrade = "C";
+  return courseGrade = "C";
 } else if (percentComplete >= 60) {
-  courseGrade = "D";
+  return courseGrade = "D";
 } else {
-  courseGrade = "F";
-}
+  return courseGrade = "F";
+};
 
 let modulesRemaining = totalModules - modulesCompleted;
 let percentRemaining = (modulesRemaining / totalModules) * 100;
