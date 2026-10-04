@@ -66,7 +66,7 @@ let adjustedDailyMinutes = adjustedDailyHours * 60;
 // Formula: percent = (part / whole) * 100
 
 const modulesCompleted = completedModules.length;
-let courseGrade;
+
 
 const getCourseProgress = function (percentRemaining) {
   if (percentRemaining >= 1 && percentRemaining < 25) {
@@ -158,7 +158,7 @@ display("Daily Study Minutes (with rest day)", adjustedDailyMinutes.toFixed(2));
 display("Course Progress", `${percentRemaining.toFixed(2)}%`);
 
 if (courseGrade === 'Invalid Entry.') {
-  display("Course Grade", courseGrade);
+  display("Course Grade", "Invalid Entry.");
 } else {
   display("Course Grade", `${courseGrade}`);
 }
