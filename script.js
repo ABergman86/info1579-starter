@@ -34,10 +34,13 @@ const displayModules = (modules) => {
     display(`Module ${i + 1}`, modules[i]);
 }
 };
-const displayCourseModules = () => {
-  displayModules(courseModules);
+const displayCourseModules = (...modules) => {
+  return modules.join(", ");
 };
-displayCourseModules();
+const completedModulesList = displayCourseModules(...completedModules);
+console.log(`Completed Modules: ${completedModulesList}`);
+const courseModulesList = displayCourseModules(...courseModules);
+console.log(`Course Modules: ${courseModulesList}`);
  
 const myName = "Amanda Bergman";
 let totalModules = 10;
