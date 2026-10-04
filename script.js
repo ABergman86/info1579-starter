@@ -45,6 +45,12 @@ const welcomeMessage = `Welcome, to ${myName}'s Webpage!`;
 const hoursPerWeek = 6;
 const totalStudyHours = totalModules * hoursPerWeek;
 
+function calculateStudyHours(modules, hoursPerModule = 6) {
+  return modules * hoursPerModule;
+}
+const totalStudyHoursCalculated = calculateStudyHours(courseModules.length);
+console.log(`Total Study Hours (Calculated): ${totalStudyHoursCalculated}`);
+
 // TODO: Calculate the number of study hours each day. Convert the output to minutes (this formula is not provided).
 // Formula: dailyStudyHours = hoursPerWeek / 7
 
