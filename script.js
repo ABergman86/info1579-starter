@@ -48,8 +48,8 @@ let isEnrolled = true;
 
 // TODO: Use a template literal to output a welcome message. Use at least one ${}.
 
-const welcomeMessage = `Welcome, to ${myName}'s Webpage!`;
-  console.log(`Welcome, to ${myName}'s Webpage!`);
+const welcomeMessage = `Welcome to ${myName}'s Webpage!`;
+console.log(welcomeMessage);
 
 // TODO: Calculate the total study hours for the course. There are 10 modules. Each module takes roughly 6 hours.
 // Formula: totalStudyHours = totalModules * hoursPerWeek
@@ -92,19 +92,21 @@ const getCourseProgress = function (percentRemaining) {
   }
 };
 
-if (percentComplete < 0 || percentComplete > 100 || typeof percentComplete !== "number") {
-  courseGrade = "Invalid Entry.";
-} else if (percentComplete >= 90) {
-  return courseGrade = "A";
-} else if (percentComplete >= 80) {
-  return courseGrade = "B";
-} else if (percentComplete >= 70) {
-  return courseGrade = "C";
-} else if (percentComplete >= 60) {
-  return courseGrade = "D";
-} else {
-  return courseGrade = "F";
-};
+function getCourseGrade(percentComplete) {
+  if (percentComplete < 0 || percentComplete > 100 || typeof percentComplete !== "number") {
+    return "Invalid Entry.";
+  } else if (percentComplete >= 90) {
+    return "A";
+  } else if (percentComplete >= 80) {
+    return "B";
+  } else if (percentComplete >= 70) {
+    return "C";
+  } else if (percentComplete >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
+}
 
 const courseGrade = getCourseGrade(percentComplete);
 
@@ -121,39 +123,28 @@ let courseCompletion = false;
 let studyPlan;
 let studyDay;
 
-const getStudyPlan = function (studyDay) => {
-  let studyPlan;
+function getStudyPlan(studyDay) {
   switch (studyDay) {
     case "Monday":
-      studyPlan = "Study for 51.43 minutes today.";
-      break;
+      return "Study for 51.43 minutes today.";
     case "Tuesday":
-      studyPlan = "Rest day! No studying required.";
-      break;
+      return "Rest day! No studying required.";
     case "Wednesday":
-      studyPlan = "Lab day! Study for 90 minutes today.";
-      break;
+      return "Lab day! Study for 90 minutes today.";
     case "Thursday":
-      studyPlan = "Applied programming activity day. Study for 120 minutes today.";
-      break;
+      return "Applied programming activity day. Study for 120 minutes today.";
     case "Friday":
-      studyPlan = "Open day! Review weak topics or take a break.";
-      break;
+      return "Open day! Review weak topics or take a break.";
     case "Saturday":
-      studyPlan = "Weekend study day. Review weekly material for 60 minutes today.";
-      break;
+      return "Weekend study day. Review weekly material for 60 minutes today.";
     case "Sunday":
-      studyPlan = "Prep day. Organize notes for next week.";
-      break;
+      return "Prep day. Organize notes for next week.";
     case "Complete":
-      studyPlan = "Course Completed";
-      break;
+      return "Course Completed";
     default:
-      studyPlan = "Invalid day entered. Please check your spelling.";
-      break;
+      return "Invalid day entered. Please check your spelling.";
   }
-  return studyPlan;
-};
+}
 
 if (courseCompletion === true) {
   studyDay = "Complete";
