@@ -121,6 +121,40 @@ let courseCompletion = false;
 let studyPlan;
 let studyDay;
 
+const getStudyPlan = function (studyDay) => {
+  let studyPlan;
+  switch (studyDay) {
+    case "Monday":
+      studyPlan = "Study for 51.43 minutes today.";
+      break;
+    case "Tuesday":
+      studyPlan = "Rest day! No studying required.";
+      break;
+    case "Wednesday":
+      studyPlan = "Lab day! Study for 90 minutes today.";
+      break;
+    case "Thursday":
+      studyPlan = "Applied programming activity day. Study for 120 minutes today.";
+      break;
+    case "Friday":
+      studyPlan = "Open day! Review weak topics or take a break.";
+      break;
+    case "Saturday":
+      studyPlan = "Weekend study day. Review weekly material for 60 minutes today.";
+      break;
+    case "Sunday":
+      studyPlan = "Prep day. Organize notes for next week.";
+      break;
+    case "Complete":
+      studyPlan = "Course Completed";
+      break;
+    default:
+      studyPlan = "Invalid day entered. Please check your spelling.";
+      break;
+  }
+  return studyPlan;
+};
+
 if (courseCompletion === true) {
   studyDay = "Complete";
 } else {
