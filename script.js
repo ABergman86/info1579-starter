@@ -60,7 +60,7 @@ let adjustedDailyMinutes = adjustedDailyHours * 60;
 // Formula: percent = (part / whole) * 100
 
  //let modulesCompleted = parseInt(prompt('Enter the number of modules completed:'));
-let percentComplete = (modulesCompleted / totalModules) * 100;
+
 let courseGrade;
 
 
